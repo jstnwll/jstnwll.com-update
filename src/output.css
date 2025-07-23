@@ -194,17 +194,26 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
   .flex {
     display: flex;
   }
   .inline-block {
     display: inline-block;
   }
+  .h-auto {
+    height: auto;
+  }
   .h-screen {
     height: 100vh;
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-64 {
+    width: calc(var(--spacing) * 64);
   }
   .min-w-screen {
     min-width: 100vw;
@@ -239,8 +248,20 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .gap-x-5 {
     column-gap: calc(var(--spacing) * 5);
+  }
+  .gap-y-20 {
+    row-gap: calc(var(--spacing) * 20);
   }
   .overflow-y-scroll {
     overflow-y: scroll;
@@ -264,6 +285,9 @@
   }
   .bg-teal-200 {
     background-color: var(--color-teal-200);
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
@@ -351,6 +375,14 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .transition-transform {
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .hover\:scale-125 {
     &:hover {
       @media (hover: hover) {
@@ -368,6 +400,19 @@
         --tw-skew-y: skewY(calc(2deg * -1));
         transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
       }
+    }
+  }
+  .hover\:-skew-x-2 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-skew-x: skewX(calc(2deg * -1));
+        transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+      }
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
     }
   }
 }
